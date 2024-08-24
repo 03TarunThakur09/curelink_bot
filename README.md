@@ -16,8 +16,8 @@ The `init.py` file is responsible for processing meal pictures sent by patients.
 
 ### Key Functions
 
-- **`process_diet_chart`**: Processes the diet chart to extract meal details.
-- **`extract_ticket_info`**: Retrieves ticket creation information.
+- **`process_diet_chart`**: Here we prepare the certain data structure where it have the design timing as per the diet plan.
+- **`extract_ticket_info`**: Retrieves ticket creation information like ticket_id and ticket_created(To identify the patient's current time and extract the specific diet plan accordingly).
 - **`convert_to_datetime`**: Converts ticket creation time to a datetime object.
 - **`extract_weekday`**: Identifies the day of the week based on the ticket creation date.
 - **`find_meal_time`**: Determines the meal time based on the provided timings and weekday.
