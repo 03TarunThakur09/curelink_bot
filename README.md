@@ -26,18 +26,20 @@ The `init.py` file is responsible for processing meal pictures sent by patients.
 ## `llm_prompt.py`
 
 ### Purpose
-The `llm_prompt.py` file is designed to automate the response generation process using a large language model (LLM). It processes patient queries and diet plans, formats the data into a prompt, and generates responses using the LLM. The responses are then saved in a structured format.
-
+The `llm_prompt.py` file is designed to automate the response generation process using a large language model (LLM). It processes patient queries and diet plans, formats the data into a prompt, and generates responses using the LLM.
 ### Key Functions
 
 - **`format_chat_history`**: Formats the chat history for use in the prompt.
 - **`process_data`**: Main function that processes the patient data based on the ticket ID, extracts relevant meal details, and generates a response using the LLM.
 - **`chain`**: A chain of prompts and models that generates the final response.
 
-### `queries.json`
+### Improvement
 
-This JSON file contains the data used for processing, including patient profiles, diet charts, and chat history.
-
+- **LLMs**: By Integrate newer or more advanced LLMs to enhance response accuracy and naturalness.
+- **Enhanced Context Handling**: Improve how context is maintained across multiple interactions to provide more coherent and contextually relevant responses.
+- **Extended Personalization**: Develop more sophisticated techniques for tailoring responses to individual patient preferences and history.
+- **Dynamic Response Generation**: Incorporate additional parameters and fine-tuning options to better handle diverse patient queries and dietary scenarios.
+- **Performance Optimization**: Optimize the performance and efficiency of the response generation process to handle a larger volume of queries and reduce latency.
 ## How to Use
 
 1. **Set up OpenAI API Key**:
@@ -47,7 +49,7 @@ This JSON file contains the data used for processing, including patient profiles
    - Ensure the `queries.json` file contains relevant patient data, diet charts, and chat context.
 
 3. **Run the Script**:
-   - Execute `llm_prompt.py` by providing a `ticket_id` when prompted. The script will generate and save the response in `output_results_test.json`.
+   - Execute `llm_prompt.py` by providing a `ticket_id` when prompted. The script will generate response to the patient and save the response in `output.json`.
 
 4. **View Results**:
    - The generated response, along with the ideal response, will be saved in `output_results_test.json`.
@@ -58,7 +60,3 @@ This JSON file contains the data used for processing, including patient profiles
 - `langchain`
 - `openai`
 - Other dependencies listed in `requirements.txt`
-
-## Example Usage
-
-```bash
