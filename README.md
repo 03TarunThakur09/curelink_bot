@@ -12,7 +12,7 @@ The project uses Language Learning Models (LLMs) to generate responses that addr
 ## `init_prompt.py`
 
 ### Purpose
-The `init.py` file is responsible for processing meal pictures sent by patients. For each meal picture, the script determines the ideal meal the patient should be consuming at that specific day and time, according to the diet chart provided. The diet chart includes a start date, and meals are consumed in a specific order based on this date. The file includes functions to extract meal details, determine meal timings, and format the meal data for further processing.
+The `init_prompt.py` file is responsible for processing meal pictures sent by patients. For each meal picture, the script determines the ideal meal the patient should be consuming at that specific day and time, according to the diet chart provided. The diet chart includes a start date, and meals are consumed in a specific order based on this date. The file includes functions to extract meal details, determine meal timings, and format the meal data for further processing.
 
 ### Key Functions
 
