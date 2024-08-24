@@ -9,22 +9,30 @@ The project uses Language Learning Models (LLMs) to generate responses that addr
 - **Empathetic Response Generation**: Produces concise, compassionate responses tailored to the patient’s communication style.
 ## Project Structure
 
-### `init.py`
+## `init.py`
 
-This file includes functions to:
+### Purpose
+The `init.py` file is responsible for processing meal pictures sent by patients. For each meal picture, the script determines the ideal meal the patient should be consuming at that specific day and time, according to the diet chart provided. The diet chart includes a start date, and meals are consumed in a specific order based on this date. The file includes functions to extract meal details, determine meal timings, and format the meal data for further processing.
 
-- Process diet charts and extract meal details.
-- Determine meal timings based on patient queries.
-- Generate responses based on patient profiles and diet history.
+### Key Functions
 
-### `llm_prompt.py`
+- **`process_diet_chart`**: Processes the diet chart to extract meal details.
+- **`extract_ticket_info`**: Retrieves ticket creation information.
+- **`convert_to_datetime`**: Converts ticket creation time to a datetime object.
+- **`extract_weekday`**: Identifies the day of the week based on the ticket creation date.
+- **`find_meal_time`**: Determines the meal time based on the provided timings and weekday.
+- **`get_meal_notes`**: Gathers meal notes to compare with the patient's diet plan.
 
-This file handles:
+## `llm_prompt.py`
 
-- Loading and formatting chat history.
-- Defining the prompt template for response generation.
-- Processing data based on the provided ticket ID.
-- Generating and saving the response, along with the ideal response, in `output_results_test.json`.
+### Purpose
+The `llm_prompt.py` file is designed to automate the response generation process using a large language model (LLM). It processes patient queries and diet plans, formats the data into a prompt, and generates responses using the LLM. The responses are then saved in a structured format.
+
+### Key Functions
+
+- **`format_chat_history`**: Formats the chat history for use in the prompt.
+- **`process_data`**: Main function that processes the patient data based on the ticket ID, extracts relevant meal details, and generates a response using the LLM.
+- **`chain`**: A chain of prompts and models that generates the final response.
 
 ### `queries.json`
 
