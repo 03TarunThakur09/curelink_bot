@@ -58,4 +58,3 @@ The `llm_prompt.py` file is designed to automate the response generation process
 - Python 3.7+
 - `langchain`
 - `openai`
-- Other dependencies listed in `requirements.txt`
