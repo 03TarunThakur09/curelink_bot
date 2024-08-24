@@ -39,19 +39,21 @@ prompt_template = PromptTemplate(
         "1. **Patient's Previous Conversation with doctors**: {latest_queries}\n"
         "2. **Diet Plan**: {diet_plan}\n"
         "3. **Full diet plan for particular time period**: {full_diet_plan}\n"
+        "Based on the conversation you have to reply for latest query that is {last_query} but also keep in mind of the previous conversation also which is very important.\n"
         "**Focus Points:**\n"
-        "1. **Identify and List Foods**: Identify and list all the foods mentioned by the patient in their latest queries.\n"
+        "1. **Identify and List Foods**: Identify and list all the foods mentioned by the patient in their latest queries[Note: do note menrioned in response].\n"
         "2. **Compare with Diet Plan**: Compare these foods with those specified in the diet plan.\n"
-        "3. **Address Discrepancies**: Specifically, mention any discrepancies or foods included by the patient that are not part of the diet plan. Address these discrepancies in your response.\n"
+        "3. **Address Discrepancies**: Specifically, mention any discrepancies or foods included by the patient that are not part of the diet plan. Address these discrepancies in your response(it's important).\n"
         "Otherwise, no need to give the details of food.\n"
         "**Response Requirements:**\n"
         "- Generate the ideal response to the patient in a concise form, typically in the same messaging language/style as the patient. If the patient uses informal language or mixes languages (e.g., English and Hindi), the response should reflect that.\n"
-        "- Focus on addressing discrepancies in the diet with empathy and a gentle tone.\n"
+        "- Focus on addressing discrepancies in the diet with empathy and a gentle tone and do not include like user and patient name.\n"
         "- Limit the response to around 100 words or less.\n"
         "- Begin with a friendly tone, and keep the message short and focused on any deviations from the diet plan."
         "- **Language and Style**: Match the language and style of your response to the language and style used by the patient. If the patient communicates in Hinglish (a mix of Hindi and English), respond in Hinglish. If the patient uses a specific informal or mixed language style, your response should mirror that.\n"
     )
 )
+
 
 # Create the chain for processing the prompt
 chain = prompt_template | model
