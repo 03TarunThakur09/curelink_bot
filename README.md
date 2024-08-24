@@ -37,7 +37,6 @@ The `llm_prompt.py` file is designed to automate the response generation process
 
 - **LLMs**: By Integrate newer or more advanced LLMs to enhance response accuracy and naturalness.
 - **Enhanced Context Handling**: Improve how context is maintained across multiple interactions to provide more coherent and contextually relevant responses.
-- **Extended Personalization**: Develop more sophisticated techniques for tailoring responses to individual patient preferences and history.
 - **Dynamic Response Generation**: Incorporate additional parameters and fine-tuning options to better handle diverse patient queries and dietary scenarios.
 - **Performance Optimization**: Optimize the performance and efficiency of the response generation process to handle a larger volume of queries and reduce latency.
 ## How to Use
