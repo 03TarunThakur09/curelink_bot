@@ -1,1 +1,1 @@
-# curelink_bot
+# Curelink powered bot
