@@ -35,10 +35,10 @@ The `llm_prompt.py` file is designed to automate the response generation process
 
 ### Improvement
 
-- **LLMs**: By Integrate newer or more advanced LLMs to enhance response accuracy and naturalness.
-- **Enhanced Context Handling**: Improve how context is maintained across multiple interactions to provide more coherent and contextually relevant responses.
-- **Dynamic Response Generation**: Incorporate additional parameters and fine-tuning options to better handle diverse patient queries and dietary scenarios.
-- **Performance Optimization**: Optimize the performance and efficiency of the response generation process to handle a larger volume of queries and reduce latency.
+- **LLMs**: Here we use GPT models instead of we can use also open source(for costing) and other advanced LLMs to enhance response accuracy and naturalness.
+- **Prompt engineering**: By providing the more context in input prompt like by in-depth context of the patient information the genrated response will be improved and also by doint prompt engineering.
+- **AI Agents**: We can bulid custom AI agents for this.
+
 ## How to Use
 
 1. **Set up OpenAI API Key**:
