@@ -1,9 +1,9 @@
 import json
+from datetime import datetime
+
 with open('queries.json') as f:
     data = json.load(f)
 
-import json
-from datetime import datetime
 
 def parse_time(timing_str):
     """Parse a time string into a time object."""
